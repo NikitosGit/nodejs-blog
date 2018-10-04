@@ -27,7 +27,7 @@ router.post("/create", (req, res) => {
   });
 });
 
-router.post("/login", (req, res, next) => {
+router.post("/login", (req, res) => {
   models.User.find({ email: req.body.email })
     .exec()
     .then(user => {
